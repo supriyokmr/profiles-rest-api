@@ -75,6 +75,7 @@ class HelloViewSet(viewsets.ViewSet):
                 serializer.errors,
                 status=status.HTTP_400_BAD_REQUEST
             )
+            
     def retrieve(self,request,pk=None):
         """handle getting an obj by its ID"""
         return Response({'http_method':'GET'})
@@ -90,4 +91,4 @@ class HelloViewSet(viewsets.ViewSet):
 
     def destroy(self,request,pk=None):
         """Handle deleting an object"""
-        return Response({'http_method':'DELETE'})            
+        return Response({'http_method':'DELETE'})
